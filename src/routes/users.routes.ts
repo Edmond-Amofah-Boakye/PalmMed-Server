@@ -138,7 +138,7 @@ router.post("/register", createUser);
  *       '500':
  *         description: Internal server error
  */
-router.patch("/profile", auth, updateUserProfile);
+router.put("/profile", auth, updateUserProfile);
 
 /**
  * @swagger
