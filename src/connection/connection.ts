@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 export const DBCONNECTION = () => {
   return new Promise<void>((resolve, reject) => {
     mongoose
-      .connect(`${process.env.MONGO_URL}`)
+      .connect(`${process.env.MONGO_CONNECTION_PROD}`)
       .then((res) => {
         console.log(
           `database is running on ${res.connection.host}/${res.connection.db.databaseName}`
